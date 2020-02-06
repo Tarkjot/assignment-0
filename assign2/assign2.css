@@ -1,0 +1,21 @@
+.form-control{
+            padding:8px;
+            background: #F8F8F8;
+            border-radius:6px;
+            margin-bottom:5px;
+            
+        }
+        .form-group{
+        	margin-bottom:5px;
+        	background:#F8F8F8;
+
+        }
+        label{
+            color:#2A88AD;
+            margin-bottom:5px;
+            font-size: 20px;
+            padding:5px;
+        }
+        #msg_usr,#msg_pswd,#msg_email,#msg_gender,#msg_date,#msg_age,#msg_city,#msg_err,#msg_dsgn,#msg_intro{
+        	color:red;
+        }

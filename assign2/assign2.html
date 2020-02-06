@@ -1,0 +1,111 @@
+<!doctype html5>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="assign2.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="assign2.js"></script>
+</head>
+
+
+<body>
+
+<form action="" method="post" enctype="multipart/form-data">
+<p id="khali">khali</p>
+    <!-- text -->
+    <div class= "form-group">
+            <label for="title">User Name</label><br/>
+            <input id="reqd_usr" type="text" class="form-control" name="user_name" oninput="remove_warning('reqd_usr','msg_usr')" >
+            <p id="msg_usr"></p>
+    </div>
+
+    <!-- Password -->
+    <div class= "form-group">
+            <label for="title">Password</label><br/>
+            <input id="reqd_pswd" type="password" class="form-control" name="password" oninput="remove_warning('reqd_pswd','msg_pswd')">
+            <p id="msg_pswd"></p>
+    </div>
+
+    <!-- email -->
+    <div class= "form-group">
+            <label for="title">Email-id</label><br/>
+            <input id="reqd_email" type="text" class="form-control" name="email" oninput="remove_warning('reqd_email','msg_email')">
+            <p id="msg_email"></p>
+    </div>
+
+                                                                          
+    <!-- radio -->
+    <div class="form-group">
+            <label for="title">Gender</label><br/>
+            <input type="radio" class="form-control"  id="1" name="gender" value="Male" oninput="remove_warning('1','msg_gender')">Male
+            <input type="radio" class="form-control"  id="2" name="gender" value="Female" oninput="remove_warning('2','msg_gender')">Female
+            <input type="radio" class="form-control"  id="3" name="gender" value="others" oninput="remove_warning('3','msg_gender')">Other
+            <p id="msg_gender"></p>
+    </div>
+
+    <!-- date -->
+    <div class= "form-group">
+            <label for="title">Date of Birth</label><br/>
+            <input type="datetime-local" id="reqd_date" class="form-control" name="bday" onfocus="remove_warning('reqd_date','msg_date')">
+            <p id="msg_date"></p>
+    </div>
+  
+
+    <!-- number -->
+    <div>
+    <label for="title">Age</label><br/>
+    <input type="text" class="form-control" name="quantity" id="reqd_age" oninput="remove_warning('reqd_age','msg_age')">
+    <p id="msg_age"></p>
+    </div>
+   
+
+    <!-- select -->
+    <div class= "form-group">
+            <label for="title">City</label><br/>
+            <select name="city" id="reqd_city" class="form-control" oninput="remove_warning('reqd_city','msg_city')">
+                <option value=""></option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Mohali">Mohali</option>
+                <option value="Panchkula">Panchkula</option>        
+            </select>
+            <p id="msg_city"></p>
+    </div>
+
+    <!-- multiple select-->
+    <div class= "form-group" >
+        <label for="title">City</label><br/>
+        <select name="city2" id="reqd_multi" class="form-control"  oninput="remove_warning('reqd_multi','msg_err')" multiple>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Mohali">Mohali</option>
+            <option value="Panchkula">Panchkula</option>        
+        </select>
+        <p id="msg_err"></p>
+     </div>
+
+    <!-- checkbox -->
+    <div class= "form-group">
+            <label for="title">Who are you?</label><br/>
+            <input type="checkbox" class="form-control" id="4" name="designation" value="Student" oninput="remove_warning('4','msg_dsgn')">I am a Student<br/>
+            <input type="checkbox" class="form-control" id="5" name="designation" value="Teacher" oninput="remove_warning('5','msg_dsgn')">I am a Teacher<br/>
+            <p id="msg_dsgn"></p>
+    </div>
+  
+    <!-- textarea -->
+    <div class= "form-group">
+            <label for="title">Tell us about yourself</label><br/>
+            <textarea name="user_intro" rows="10" cols="30" id="reqd_intro" class="form-control" oninput="remove_warning('reqd_intro','msg_intro')">like...i love walking</textarea>
+            <p id="msg_intro"></p>
+    </div>
+  
+    <!-- captcha -->
+    <div class="g-recaptcha" data-sitekey="6LfUANUUAAAAAK3aKdWPf0o7rN0Y8IEavn3MJpKm" data-callback="verifyCaptcha"></div>
+    <div id="g-recaptcha-error"></div>
+    
+    <!-- button -->
+     <div class= "form-group">
+        <button type="button" class="form-control" onclick="error_msg()">Submit</button>
+    </div>
+</form>
+
+ </body>
+</html>
